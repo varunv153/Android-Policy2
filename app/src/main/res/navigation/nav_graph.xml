@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreenFragment">
+
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.policy.homescreen.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_companySignupFragment"
+            app:destination="@id/companySignup" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_companyLoginFragment"
+            app:destination="@id/companyLoginFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_userLoginFragment"
+            app:destination="@id/userLoginFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_userSignupFragment"
+            app:destination="@id/userSignupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyLoginFragment"
+        android:name="com.example.policy.homescreen.CompanyLoginFragment"
+        android:label="fragment_company_login"
+        tools:layout="@layout/fragment_company_login" >
+        <action
+            android:id="@+id/action_companyLoginFragment_to_companyScreenFragment"
+            app:destination="@id/companyScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyScreenFragment"
+        android:name="com.example.policy.CompanyScreenFragment"
+        android:label="fragment_company_screen"
+        tools:layout="@layout/fragment_company_screen" />
+    <fragment
+        android:id="@+id/companySignup"
+        android:name="com.example.policy.homescreen.CompanySignupFragment"
+        android:label="fragment_company_signup"
+        tools:layout="@layout/fragment_company_signup" />
+    <fragment
+        android:id="@+id/userLoginFragment"
+        android:name="com.example.policy.homescreen.UserLoginFragment"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login" >
+        <action
+            android:id="@+id/action_userLoginFragment_to_userScreenFragment"
+            app:destination="@id/userScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userScreenFragment"
+        android:name="com.example.policy.UserScreenFragment"
+        android:label="fragment_user_screen"
+        tools:layout="@layout/fragment_user_screen" />
+    <fragment
+        android:id="@+id/userSignupFragment"
+        android:name="com.example.policy.homescreen.UserSignupFragment"
+        android:label="fragment_user_signup"
+        tools:layout="@layout/fragment_user_signup" />
+</navigation>
