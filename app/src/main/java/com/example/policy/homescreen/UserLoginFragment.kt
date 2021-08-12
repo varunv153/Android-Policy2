@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.policy.R
+import com.example.policy.databinding.FragmentMainScreenBinding
 
 class UserLoginFragment : Fragment()
 {

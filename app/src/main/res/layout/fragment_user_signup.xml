@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".homescreen.UserSignupFragment">
-
+    <data>
+        <variable
+            name="userSignupFragment"
+            type="com.example.policy.homescreen.UserSignupFragment"/>
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:onClick="createUser" />
+            android:onClick="@{()->userSignupFragment.signupUser()}" />
 
         <TextView
             android:id="@+id/displayInfo"
@@ -58,4 +62,4 @@
     </LinearLayout>
 
 
-</FrameLayout>
+</layout>
