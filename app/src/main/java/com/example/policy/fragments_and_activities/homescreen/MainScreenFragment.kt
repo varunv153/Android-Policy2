@@ -1,4 +1,4 @@
-package com.example.policy.homescreen
+package com.example.policy.fragments_and_activities.homescreen
 
 import android.os.Bundle
 import android.util.Log

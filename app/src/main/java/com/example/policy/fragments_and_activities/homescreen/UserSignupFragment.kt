@@ -1,4 +1,4 @@
-package com.example.policy.homescreen
+package com.example.policy.fragments_and_activities.homescreen
 
 import android.os.Bundle
 import android.util.Log
@@ -10,9 +10,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.policy.R
-import com.example.policy.databinding.FragmentMainScreenBinding
 import com.example.policy.databinding.FragmentUserSignupBinding
+import com.example.policy.models.User
+import com.example.policy.models.signUpStatus
+import com.example.policy.viewmodels.UserSignupViewModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.GlobalScope
@@ -24,8 +25,6 @@ import retrofit2.http.POST
 import java.lang.Exception
 
 
-data class signUpStatus(var signup_status:String)
-data class User( var email:String, var password:String, var name:String, var phoneno:String )
 class UserSignupFragment : Fragment()
 {
     private var binding: FragmentUserSignupBinding? = null
@@ -55,31 +54,3 @@ class UserSignupFragment : Fragment()
     }
 }
 
-
-interface UserAPiService
-{
-    @POST("signup_user")
-    suspend fun signUpUser(@Body newUser:User):signUpStatus
-}
-class UserSignupViewModel: ViewModel()
-{
-    var result = MutableLiveData<signUpStatus>()
-    val url = "http://localhost:3001"
-    val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-    val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFactory.create(moshi)).baseUrl(url).build()
-    val service:UserAPiService = retrofit.create(UserAPiService::class.java)
-    fun createUser(newUser: User)
-    {
-        result.value = signUpStatus("hi")
-        GlobalScope.launch{
-            try
-            {
-                result.postValue(service.signUpUser(newUser))
-            }
-            catch (e: Exception)
-            {
-                Log.e("tag",e.toString())
-            }
-        }
-    }
-}

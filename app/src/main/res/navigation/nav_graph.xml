@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/mainScreenFragment"
-        android:name="com.example.policy.homescreen.MainScreenFragment"
+        android:name="com.example.policy.fragments_and_activities.homescreen.MainScreenFragment"
         android:label="fragment_main_screen"
         tools:layout="@layout/fragment_main_screen">
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/companyLoginFragment"
-        android:name="com.example.policy.homescreen.CompanyLoginFragment"
+        android:name="com.example.policy.fragments_and_activities.homescreen.CompanyLoginFragment"
         android:label="fragment_company_login"
         tools:layout="@layout/fragment_company_login" >
         <action
@@ -35,17 +35,17 @@
     </fragment>
     <fragment
         android:id="@+id/companyScreenFragment"
-        android:name="com.example.policy.CompanyScreenFragment"
+        android:name="com.example.policy.fragments_and_activities.CompanyScreenFragment"
         android:label="fragment_company_screen"
         tools:layout="@layout/fragment_company_screen" />
     <fragment
         android:id="@+id/companySignup"
-        android:name="com.example.policy.homescreen.CompanySignupFragment"
+        android:name="com.example.policy.fragments_and_activities.homescreen.CompanySignupFragment"
         android:label="fragment_company_signup"
         tools:layout="@layout/fragment_company_signup" />
     <fragment
         android:id="@+id/userLoginFragment"
-        android:name="com.example.policy.homescreen.UserLoginFragment"
+        android:name="com.example.policy.fragments_and_activities.homescreen.UserLoginFragment"
         android:label="fragment_user_login"
         tools:layout="@layout/fragment_user_login" >
         <action
@@ -54,12 +54,12 @@
     </fragment>
     <fragment
         android:id="@+id/userScreenFragment"
-        android:name="com.example.policy.UserScreenFragment"
+        android:name="com.example.policy.fragments_and_activities.UserScreenFragment"
         android:label="fragment_user_screen"
         tools:layout="@layout/fragment_user_screen" />
     <fragment
         android:id="@+id/userSignupFragment"
-        android:name="com.example.policy.homescreen.UserSignupFragment"
+        android:name="com.example.policy.fragments_and_activities.homescreen.UserSignupFragment"
         android:label="fragment_user_signup"
         tools:layout="@layout/fragment_user_signup" />
 </navigation>
