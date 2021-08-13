@@ -5,7 +5,7 @@ import com.example.policy.models.signUpStatus
 import retrofit2.http.Body
 import retrofit2.http.POST
 
-interface UserAPiService
+interface UserAPIService
 {
     @POST("signup_user")
     suspend fun signUpUser(@Body newUser: User): signUpStatus

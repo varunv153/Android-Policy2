@@ -4,13 +4,14 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.policy.api.RetrofitInstance.service
 import com.example.policy.models.User
 import com.example.policy.models.signUpStatus
+import com.example.policy.repository.UserRepository
 import kotlinx.coroutines.launch
 
 class UserSignupViewModel: ViewModel()
 {
+    private var repository = UserRepository()
     var result = MutableLiveData<signUpStatus>()
     fun createUser(newUser: User)
     {
@@ -18,7 +19,7 @@ class UserSignupViewModel: ViewModel()
         viewModelScope.launch{
             try
             {
-                var res = service.signUpUser(newUser)
+                val res = repository.signUpUser(newUser)
                 result.postValue(res)
             }
             catch (e: Exception)
