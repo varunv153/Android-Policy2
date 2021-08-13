@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.*
 import com.example.policy.databinding.FragmentUserSignupBinding
 import com.example.policy.models.User
 import com.example.policy.models.signUpStatus
@@ -28,9 +25,12 @@ import java.lang.Exception
 class UserSignupFragment : Fragment()
 {
     private var binding: FragmentUserSignupBinding? = null
+    private lateinit var viewModel:UserSignupViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
+        viewModel = ViewModelProvider(this).get(UserSignupViewModel::class.java)
         binding = FragmentUserSignupBinding.inflate(inflater,container,false)
+        binding?.displayInfo?.text = viewModel.result.value.toString()
         return binding?.root
     }
 
@@ -40,7 +40,6 @@ class UserSignupFragment : Fragment()
     }
     fun signupUser()
     {
-        var viewModel = ViewModelProvider(this).get(UserSignupViewModel::class.java)
 
         var email =  binding?.signupEmail?.text.toString()
         var password =  binding?.signupPassword?.text.toString()
