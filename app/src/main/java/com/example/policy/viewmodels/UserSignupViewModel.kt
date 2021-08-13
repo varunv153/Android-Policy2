@@ -4,27 +4,28 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.policy.api.RetrofitInstance.moshi
 import com.example.policy.models.User
 import com.example.policy.models.signUpStatus
 import com.example.policy.repository.UserRepository
 import kotlinx.coroutines.launch
+import retrofit2.Response
 
 class UserSignupViewModel: ViewModel()
 {
     private var repository = UserRepository()
-    var result = MutableLiveData<signUpStatus>()
+    var result = MutableLiveData<Response<signUpStatus>>()
     fun createUser(newUser: User)
     {
-        result.value = signUpStatus("hi")
         viewModelScope.launch{
             try
             {
-                val res = repository.signUpUser(newUser)
-                result.postValue(res)
+                var a =  repository.signUpUser(newUser)
+                result.value = a
             }
             catch (e: Exception)
             {
-                Log.e("tag", e.toString())
+                Log.e("exception", e.toString())
             }
         }
     }
