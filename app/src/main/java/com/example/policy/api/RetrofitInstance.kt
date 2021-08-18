@@ -11,5 +11,6 @@ object RetrofitInstance {
     val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFactory.create(moshi)).baseUrl(
         Constants.BASE_URL
     ).build()
-    val service = retrofit.create(UserAPIService::class.java)
+    val userAPIService = retrofit.create(UserAPIService::class.java)
+    val companyAPIService = retrofit.create(CompanyAPIService::class.java)
 }

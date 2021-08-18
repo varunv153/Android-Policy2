@@ -1,26 +1,27 @@
 package com.example.policy.viewmodels
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.policy.models.Company
 import com.example.policy.models.User
 import com.example.policy.models.signUpStatus
+import com.example.policy.repository.CompanyRepository
 import com.example.policy.repository.UserRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class UserSignupViewModel: ViewModel()
+class CompanySignupViewModel: ViewModel()
 {
-    private var repository = UserRepository()
+    private var repository = CompanyRepository()
     var result = MutableLiveData<Response<signUpStatus>>()
-    fun createUser(newUser: User)
+    fun createCompany(newCompany: Company)
     {
         viewModelScope.launch{
             try
             {
-                result.value = repository.signUpUser(newUser)
+                result.value = repository.signUpCompany(newCompany)
             }
             catch (e: Exception)
             {

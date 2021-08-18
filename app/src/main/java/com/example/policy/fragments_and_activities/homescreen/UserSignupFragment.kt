@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import com.example.policy.databinding.FragmentUserSignupBinding
 import com.example.policy.models.User
@@ -38,15 +39,21 @@ class UserSignupFragment : Fragment()
     }
     fun signupUser()
     {
-        var i="hi"
         viewModel.createUser(getUser())
         viewModel.result.observe(this, {
-            /*Log.e("tag", "hi")
-            Log.e("tag", i), the bug has something to do with the difference in logcat of these statements */
-            if(it.isSuccessful)
-                binding?.displayInfo?.text = it.body().toString()
-            else if(it.errorBody()!=null)
-                binding?.displayInfo?.text = it.errorBody()!!.string()
+            try {
+                if (it.isSuccessful)
+                    binding?.displayInfo?.text = it.body().toString()
+                else {
+                    val errorbody = it.errorBody()!!.string()
+                    binding?.displayInfo?.text = errorbody
+                    Log.e("errorbody", errorbody)
+                }
+            }
+            catch(e:Exception)
+            {
+                Log.e("Exception",e.toString())
+            }
         })
     }
 }

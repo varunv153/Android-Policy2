@@ -8,10 +8,10 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
 
-interface UserAPIService
+interface CompanyAPIService
 {
-    @POST("signup_user")
-    suspend fun signUpUser(@Body newUser: User): Response<signUpStatus>
-    @POST("login_user")
-    suspend fun loginUser(@Body newUser: User): Response<loginStatus>
+    @POST("signup_company")
+    suspend fun signUpCompany(@Body newCompany: Company): Response<signUpStatus>
+    @POST("login_company")
+    suspend fun loginCompany(@Body newCompany: Company): Response<loginStatus>
 }
