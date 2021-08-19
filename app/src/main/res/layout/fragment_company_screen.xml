@@ -2,7 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragments_and_activities.CompanyScreenFragment">
-
+    <data>
+        <variable
+            name="companyScreenFragment"
+            type="com.example.policy.fragments_and_activities.CompanyScreenFragment"/>
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,30 +16,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create Policy"
-            android:onClick="renderCreatePolicy">
+            android:onClick="@{()->companyScreenFragment.renderCreatePolicy()}">
         </Button>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View my Policies"
-            android:onClick="renderViewPoliciesCompany">
+            android:onClick="@{()->companyScreenFragment.renderViewPoliciesCompany()}">
         </Button>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Bonds">
+            android:text="View Bonds"
+            android:onClick="@{()->companyScreenFragment.renderViewBonds()}">
         </Button>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Claims"
-            android:onClick="renderViewClaimsCompany">
+            android:onClick="@{()->companyScreenFragment.renderViewClaimsCompany()}">
         </Button>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Logout"
-            android:onClick="logoutCompany">
+            android:onClick="@{()->companyScreenFragment.logoutCompany()}">
         </Button>
     </LinearLayout>
 

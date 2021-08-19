@@ -27,5 +27,6 @@ class UserSignupViewModel: ViewModel()
                 Log.e("exception", e.toString())
             }
         }
+
     }
 }

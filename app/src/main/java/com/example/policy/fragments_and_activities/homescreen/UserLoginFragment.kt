@@ -2,17 +2,19 @@ package com.example.policy.fragments_and_activities.homescreen
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.policy.R
 import com.example.policy.databinding.FragmentUserLoginBinding
-import com.example.policy.databinding.FragmentUserSignupBinding
 import com.example.policy.models.User
 import com.example.policy.viewmodels.UserLoginViewModel
-import com.example.policy.viewmodels.UserSignupViewModel
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class UserLoginFragment : Fragment()
 {
@@ -43,8 +45,10 @@ class UserLoginFragment : Fragment()
         viewModel.loginUser(getUser())
         viewModel.result.observe(this, {
             try {
-                if (it.isSuccessful)
+                if (it.isSuccessful) {
                     binding?.displayInfo?.text = it.body().toString()
+                    renderUserScreen()
+                }
                 else {
                     val errorbody = it.errorBody()!!.string()
                     binding?.displayInfo?.text = errorbody
@@ -56,5 +60,10 @@ class UserLoginFragment : Fragment()
                 Log.e("Exception",e.toString())
             }
         })
+    }
+    private fun renderUserScreen()
+    {
+        Log.e("tag", "companyscreen")
+        findNavController().navigate(R.id.action_userLoginFragment_to_userScreenFragment)
     }
 }
