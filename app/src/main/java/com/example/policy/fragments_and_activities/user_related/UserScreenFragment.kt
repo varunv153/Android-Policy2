@@ -1,4 +1,4 @@
-package com.example.policy.fragments_and_activities
+package com.example.policy.fragments_and_activities.user_related
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -35,9 +35,13 @@
     </fragment>
     <fragment
         android:id="@+id/companyScreenFragment"
-        android:name="com.example.policy.fragments_and_activities.CompanyScreenFragment"
+        android:name="com.example.policy.fragments_and_activities.company_related.CompanyScreenFragment"
         android:label="fragment_company_screen"
-        tools:layout="@layout/fragment_company_screen" />
+        tools:layout="@layout/fragment_company_screen" >
+        <action
+            android:id="@+id/action_companyScreenFragment_to_createPolicyFragment"
+            app:destination="@id/createPolicyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/companySignup"
         android:name="com.example.policy.fragments_and_activities.homescreen.CompanySignupFragment"
@@ -54,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/userScreenFragment"
-        android:name="com.example.policy.fragments_and_activities.UserScreenFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.UserScreenFragment"
         android:label="fragment_user_screen"
         tools:layout="@layout/fragment_user_screen" />
     <fragment
@@ -62,4 +66,9 @@
         android:name="com.example.policy.fragments_and_activities.homescreen.UserSignupFragment"
         android:label="fragment_user_signup"
         tools:layout="@layout/fragment_user_signup" />
+    <fragment
+        android:id="@+id/createPolicyFragment"
+        android:name="com.example.policy.fragments_and_activities.company_related.CreatePolicyFragment"
+        android:label="fragment_create_policy"
+        tools:layout="@layout/fragment_create_policy" />
 </navigation>

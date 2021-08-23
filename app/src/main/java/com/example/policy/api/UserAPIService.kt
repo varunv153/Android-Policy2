@@ -1,6 +1,5 @@
 package com.example.policy.api
 
-import com.example.policy.models.Company
 import com.example.policy.models.User
 import com.example.policy.models.loginStatus
 import com.example.policy.models.signUpStatus

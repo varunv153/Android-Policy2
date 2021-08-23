@@ -1,9 +1,7 @@
 package com.example.policy.repository
 
 import com.example.policy.api.RetrofitInstance
-import com.example.policy.models.Company
-import com.example.policy.models.loginStatus
-import com.example.policy.models.signUpStatus
+import com.example.policy.models.*
 import retrofit2.Response
 
 class CompanyRepository
@@ -15,5 +13,9 @@ class CompanyRepository
     suspend fun loginCompany(newCompany: Company): Response<loginStatus>
     {
         return RetrofitInstance.companyAPIService.loginCompany(newCompany)
+    }
+    suspend fun createPolicy(newPolicy: NewPolicy): Response<policyStatus>
+    {
+        return RetrofitInstance.companyAPIService.createPolicy(newPolicy)
     }
 }

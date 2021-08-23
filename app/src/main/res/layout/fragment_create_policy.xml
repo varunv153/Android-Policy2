@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context = ".fragments_and_activities.company_related.CreatePolicyFragment">
+    <data>
+        <variable
+            name="createPolicyFragment"
+            type="com.example.policy.fragments_and_activities.company_related.CreatePolicyFragment"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/policyWording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter policy wording" />
+
+        <EditText
+            android:id="@+id/roomRentCap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter room rent cap"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/sumInsured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter sum insured"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/exemptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter claim exemptions"/>
+
+        <EditText
+            android:id="@+id/csr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter claim settlement ratio"
+            android:inputType="number"/>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Policy"
+            android:onClick="@{()->createPolicyFragment.createPolicy()}" />
+
+        <TextView
+            android:id="@+id/displayInfo"
+            android:layout_width="match_parent"
+            android:layout_height="346dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+</layout>

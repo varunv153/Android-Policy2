@@ -1,4 +1,4 @@
-package com.example.policy.fragments_and_activities
+package com.example.policy.fragments_and_activities.company_related
 
 import android.os.Bundle
 import android.util.Log
@@ -31,7 +31,7 @@ class CompanyScreenFragment : Fragment()
     fun renderCreatePolicy()
     {
         Log.e("tag","company create policy")
-        //findNavController().navigate(R.id.action_mainScreenFragment_to_companySignupFragment)
+        findNavController().navigate(R.id.action_companyScreenFragment_to_createPolicyFragment)
     }
     fun renderViewPoliciesCompany()
     {

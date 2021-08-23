@@ -10,11 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.policy.R
 import com.example.policy.databinding.FragmentUserLoginBinding
+import com.example.policy.fragments_and_activities.cookie
 import com.example.policy.models.User
 import com.example.policy.viewmodels.UserLoginViewModel
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class UserLoginFragment : Fragment()
 {
@@ -47,6 +45,7 @@ class UserLoginFragment : Fragment()
             try {
                 if (it.isSuccessful) {
                     binding?.displayInfo?.text = it.body().toString()
+                    cookie = it.headers()["Set-Cookie"]!!.split("; ")[0].split("=")[1]
                     renderUserScreen()
                 }
                 else {
