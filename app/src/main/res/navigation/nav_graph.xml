@@ -41,6 +41,12 @@
         <action
             android:id="@+id/action_companyScreenFragment_to_createPolicyFragment"
             app:destination="@id/createPolicyFragment" />
+        <action
+            android:id="@+id/action_companyScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+        <action
+            android:id="@+id/action_companyScreenFragment_to_viewCompanyPoliciesFragment"
+            app:destination="@id/viewCompanyPoliciesFragment" />
     </fragment>
     <fragment
         android:id="@+id/companySignup"
@@ -60,7 +66,11 @@
         android:id="@+id/userScreenFragment"
         android:name="com.example.policy.fragments_and_activities.user_related.UserScreenFragment"
         android:label="fragment_user_screen"
-        tools:layout="@layout/fragment_user_screen" />
+        tools:layout="@layout/fragment_user_screen" >
+        <action
+            android:id="@+id/action_userScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/userSignupFragment"
         android:name="com.example.policy.fragments_and_activities.homescreen.UserSignupFragment"
@@ -71,4 +81,18 @@
         android:name="com.example.policy.fragments_and_activities.company_related.CreatePolicyFragment"
         android:label="fragment_create_policy"
         tools:layout="@layout/fragment_create_policy" />
+    <fragment
+        android:id="@+id/viewCompanyPoliciesFragment"
+        android:name="com.example.policy.ViewCompanyPoliciesFragment"
+        android:label="fragment_view_company_policies"
+        tools:layout="@layout/fragment_view_company_policies" >
+        <action
+            android:id="@+id/action_viewCompanyPoliciesFragment_to_detailsPolicyFragment"
+            app:destination="@id/detailsPolicyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsPolicyFragment"
+        android:name="com.example.policy.DetailsPolicyFragment"
+        android:label="fragment_details_policy"
+        tools:layout="@layout/fragment_details_policy" />
 </navigation>

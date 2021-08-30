@@ -8,10 +8,13 @@
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_company_screen.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_company_signup.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_create_policy.xml" value="0.12364130434782608" />
+        <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_details_policy.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_main_screeen.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_user_login.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_user_screen.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_user_signup.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_view_company_policies.xml" value="0.10507246376811594" />
+        <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/my_row.xml" value="0.33" />
       </map>
     </option>
   </component>

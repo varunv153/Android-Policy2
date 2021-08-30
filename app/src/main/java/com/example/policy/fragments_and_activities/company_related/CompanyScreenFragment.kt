@@ -6,14 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.policy.R
-import com.example.policy.databinding.FragmentCompanyLoginBinding
 import com.example.policy.databinding.FragmentCompanyScreenBinding
-import com.example.policy.databinding.FragmentMainScreenBinding
-import com.example.policy.models.Company
-import com.example.policy.viewmodels.CompanyLoginViewModel
+import com.example.policy.fragments_and_activities.jwtToken
 
 class CompanyScreenFragment : Fragment()
 {
@@ -36,7 +32,7 @@ class CompanyScreenFragment : Fragment()
     fun renderViewPoliciesCompany()
     {
         Log.e("tag","company create policy")
-        //findNavController().navigate(R.id.action_mainScreenFragment_to_companySignupFragment)
+        findNavController().navigate(R.id.action_companyScreenFragment_to_viewCompanyPoliciesFragment)
     }
     fun renderViewBonds()
     {
@@ -51,6 +47,7 @@ class CompanyScreenFragment : Fragment()
     fun logoutCompany()
     {
         Log.e("tag","company create policy")
-        //findNavController().navigate(R.id.action_mainScreenFragment_to_companySignupFragment)
+        jwtToken = "none"
+        findNavController().navigate(R.id.action_companyScreenFragment_to_mainScreenFragment)
     }
 }

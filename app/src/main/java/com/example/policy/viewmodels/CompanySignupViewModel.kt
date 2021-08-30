@@ -5,10 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.policy.models.Company
-import com.example.policy.models.User
 import com.example.policy.models.signUpStatus
 import com.example.policy.repository.CompanyRepository
-import com.example.policy.repository.UserRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 

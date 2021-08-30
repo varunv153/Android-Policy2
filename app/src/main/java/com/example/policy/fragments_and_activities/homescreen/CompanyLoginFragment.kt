@@ -10,10 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.policy.R
 import com.example.policy.databinding.FragmentCompanyLoginBinding
-import com.example.policy.fragments_and_activities.cookie
+import com.example.policy.fragments_and_activities.jwtToken
 import com.example.policy.models.Company
 import com.example.policy.viewmodels.CompanyLoginViewModel
-import kotlin.reflect.KClass
 
 class CompanyLoginFragment : Fragment()
 {
@@ -45,7 +44,7 @@ class CompanyLoginFragment : Fragment()
             try {
                 if (it.isSuccessful) {
                     binding?.displayInfo?.text = it.body().toString()
-                    cookie = it.headers()["Set-Cookie"]!!.split("; ")[0].split("=")[1]
+                    jwtToken = it.headers()["Set-Cookie"]!!.split("; ")[0].split("=")[1]
                     renderCompanyScreen()
                 }
                 else {
