@@ -1,22 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".DetailsPolicyFragment">
+    tools:context=".fragments_and_activities.company_related.DetailsPolicyFragment">
     <data>
         <variable
             name="detailsPolicyFragment"
-            type="com.example.policy.DetailsPolicyFragment"/>
+            type="com.example.policy.fragments_and_activities.company_related.DetailsPolicyFragment"/>
     </data>
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="385dp">
 
         <TextView
+            android:id="@+id/companyNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:hint="Company Name"
             android:text="@{detailsPolicyFragment.companyName}"
-            android:textSize="24sp"/>
-    </LinearLayout>
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sumInsuredTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="-70dp"
+            android:hint="Sum Insured Value"
+            android:text="@{detailsPolicyFragment.sumInsured}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyNameTxt"
+            app:layout_constraintTop_toBottomOf="@+id/companyNameTxt" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sum Insured"
+            app:layout_constraintTop_toTopOf="@+id/sumInsuredTxt"
+            tools:layout_editor_absoluteX="41dp" />
+
+        <TextView
+            android:id="@+id/idTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Policy ID Value"
+            android:text="@{detailsPolicyFragment.policyID}"
+            app:layout_constraintStart_toStartOf="@+id/sumInsuredTxt"
+            app:layout_constraintTop_toBottomOf="@+id/sumInsuredTxt" />
+
+        <TextView
+            android:id="@+id/policyWordingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Policy Wording Value"
+            android:text="@{detailsPolicyFragment.policyWording}"
+            app:layout_constraintStart_toStartOf="@+id/sumInsuredTxt"
+            app:layout_constraintTop_toBottomOf="@+id/idTxt" />
+
+        <TextView
+            android:id="@+id/roomRentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Room Rent Cap"
+            android:text="@{detailsPolicyFragment.roomRentCap}"
+            app:layout_constraintStart_toStartOf="@+id/sumInsuredTxt"
+            app:layout_constraintTop_toBottomOf="@+id/policyWordingTxt" />
+
+        <TextView
+            android:id="@+id/expemptionsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Exemptions Value"
+            android:text="@{detailsPolicyFragment.exemptions}"
+            app:layout_constraintStart_toStartOf="@+id/sumInsuredTxt"
+            app:layout_constraintTop_toBottomOf="@+id/roomRentTxt" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/idTxt" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Policy Wording"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/policyWordingTxt" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Rent Cap"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/roomRentTxt" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Claim Settlement Ratio"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/csrRatioTxt" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exemptions"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/expemptionsTxt" />
+
+        <TextView
+            android:id="@+id/csrRatioTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:hint="CSR Value"
+            android:text="@{detailsPolicyFragment.claimSettlementRatio}"
+            app:layout_constraintStart_toStartOf="@+id/sumInsuredTxt"
+            app:layout_constraintTop_toBottomOf="@+id/expemptionsTxt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

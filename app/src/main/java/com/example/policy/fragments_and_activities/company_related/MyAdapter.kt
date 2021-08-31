@@ -1,4 +1,4 @@
-package com.example.policy
+package com.example.policy.fragments_and_activities.company_related
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.policy.R
 import com.example.policy.models.Policy
 
 
-class MyAdapter(c:Context, p:MutableList<Policy>, clickLstnr:ItemClickListener): RecyclerView.Adapter<MyAdapter.MyViewHolder>()
+class MyAdapter(c:Context, p:MutableList<Policy>, clickLstnr: ItemClickListener): RecyclerView.Adapter<MyAdapter.MyViewHolder>()
 {
     var context:Context = c
     private var policies: MutableList<Policy> = p

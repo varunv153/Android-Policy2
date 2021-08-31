@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ViewCompanyPoliciesFragment">
+    tools:context=".fragments_and_activities.company_related.ViewCompanyPoliciesFragment">
     <data>
         <variable
             name="viewCompanyPoliciesFragment"
-            type="com.example.policy.ViewCompanyPoliciesFragment" />
+            type="com.example.policy.fragments_and_activities.company_related.ViewCompanyPoliciesFragment" />
     </data>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCompanyPolicies"

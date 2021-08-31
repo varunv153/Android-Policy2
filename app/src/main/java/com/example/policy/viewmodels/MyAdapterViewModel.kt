@@ -1,4 +1,4 @@
-package com.example.policy
+package com.example.policy.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.example.policy.models.Policy

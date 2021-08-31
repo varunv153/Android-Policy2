@@ -18,4 +18,8 @@ class CompanyRepository
     {
         return RetrofitInstance.companyAPIService.createPolicy(newPolicy)
     }
+    suspend fun viewPoliciesOfCompany():Response<MutableList<Policy>>
+    {
+        return RetrofitInstance.companyAPIService.viewPoliciesOfCompany()
+    }
 }

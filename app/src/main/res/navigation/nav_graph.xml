@@ -83,7 +83,7 @@
         tools:layout="@layout/fragment_create_policy" />
     <fragment
         android:id="@+id/viewCompanyPoliciesFragment"
-        android:name="com.example.policy.ViewCompanyPoliciesFragment"
+        android:name="com.example.policy.fragments_and_activities.company_related.ViewCompanyPoliciesFragment"
         android:label="fragment_view_company_policies"
         tools:layout="@layout/fragment_view_company_policies" >
         <action
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsPolicyFragment"
-        android:name="com.example.policy.DetailsPolicyFragment"
+        android:name="com.example.policy.fragments_and_activities.company_related.DetailsPolicyFragment"
         android:label="fragment_details_policy"
         tools:layout="@layout/fragment_details_policy" />
 </navigation>
