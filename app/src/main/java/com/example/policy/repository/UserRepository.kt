@@ -1,6 +1,7 @@
 package com.example.policy.repository
 
 import com.example.policy.api.RetrofitInstance
+import com.example.policy.models.Policy
 import com.example.policy.models.User
 import com.example.policy.models.loginStatus
 import com.example.policy.models.signUpStatus
@@ -15,5 +16,9 @@ class UserRepository
     suspend fun loginUser(newUser: User): Response<loginStatus>
     {
         return RetrofitInstance.userAPIService.loginUser(newUser)
+    }
+    suspend fun viewPolicies():Response<MutableList<Policy>>
+    {
+        return RetrofitInstance.userAPIService.viewPolicies()
     }
 }

@@ -70,6 +70,9 @@
         <action
             android:id="@+id/action_userScreenFragment_to_mainScreenFragment"
             app:destination="@id/mainScreenFragment" />
+        <action
+            android:id="@+id/action_userScreenFragment_to_viewPoliciesFragment"
+            app:destination="@id/viewPoliciesFragment" />
     </fragment>
     <fragment
         android:id="@+id/userSignupFragment"
@@ -95,4 +98,13 @@
         android:name="com.example.policy.fragments_and_activities.company_related.DetailsPolicyFragment"
         android:label="fragment_details_policy"
         tools:layout="@layout/fragment_details_policy" />
+    <fragment
+        android:id="@+id/viewPoliciesFragment"
+        android:name="com.example.policy.ViewPoliciesFragment"
+        android:label="fragment_view_policies"
+        tools:layout="@layout/fragment_view_policies" >
+        <action
+            android:id="@+id/action_viewPoliciesFragment_to_detailsPolicyFragment"
+            app:destination="@id/detailsPolicyFragment" />
+    </fragment>
 </navigation>
