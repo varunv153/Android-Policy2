@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_companyScreenFragment_to_viewCompanyPoliciesFragment"
             app:destination="@id/viewCompanyPoliciesFragment" />
+        <action
+            android:id="@+id/action_companyScreenFragment_to_viewCompanyClaimsFragment"
+            app:destination="@id/viewCompanyClaimsFragment" />
     </fragment>
     <fragment
         android:id="@+id/companySignup"
@@ -157,4 +160,12 @@
         android:name="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsClaimFragment"
         android:label="fragment_details_claim"
         tools:layout="@layout/fragment_details_claim" />
+    <fragment
+        android:id="@+id/viewCompanyClaimsFragment"
+        android:name="com.example.policy.fragments_and_activities.company_related.ViewCompanyClaimsFragment"
+        android:label="ViewCompanyClaimsFragment" >
+        <action
+            android:id="@+id/action_viewCompanyClaimsFragment_to_detailsClaimFragment"
+            app:destination="@id/detailsClaimFragment" />
+    </fragment>
 </navigation>

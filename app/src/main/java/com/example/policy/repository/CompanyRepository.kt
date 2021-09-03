@@ -22,4 +22,8 @@ class CompanyRepository
     {
         return RetrofitInstance.companyAPIService.viewPoliciesOfCompany()
     }
+    suspend fun viewClaimsOfCompany():Response<MutableList<Claim>>
+    {
+        return RetrofitInstance.companyAPIService.viewClaimsOfCompany()
+    }
 }

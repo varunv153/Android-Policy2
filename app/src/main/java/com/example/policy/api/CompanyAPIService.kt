@@ -16,4 +16,6 @@ interface CompanyAPIService
     suspend fun createPolicy(@Body newPolicy: NewPolicy): Response<policyStatus>
     @GET("view_policies_of_my_company")
     suspend fun viewPoliciesOfCompany(): Response<MutableList<Policy>>
+    @GET("view_claims_of_my_company")
+    suspend fun viewClaimsOfCompany(): Response<MutableList<Claim>>
 }
