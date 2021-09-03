@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.policy.R
 import com.example.policy.databinding.FragmentViewMyBondsBinding
+import com.example.policy.fragments_and_activities.recyclerview_specific.MyAdapterBond
 import com.example.policy.models.Bond
 import com.example.policy.viewmodels.MyAdapterViewModel
 import com.example.policy.viewmodels.ViewMyBondsViewModel
@@ -41,7 +42,7 @@ class ViewMyBondsFragment : Fragment(), MyAdapterBond.ItemClickListener
             {
                 Log.e("Exception",e.toString())
             }
-            val recyclerView = binding?.recyclerViewCompanyPolicies
+            val recyclerView = binding?.recyclerViewBonds
             recyclerView?.adapter = MyAdapterBond(container!!.context, bonds,this)
             recyclerView?.layoutManager = LinearLayoutManager(context)
         })

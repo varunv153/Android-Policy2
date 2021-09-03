@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
-tools:context=".fragments_and_activities.user_related.ViewMyBondsFragment">
+tools:context=".fragments_and_activities.user_related.ViewMyClaimsFragment">
     <data>
         <variable
-            name="viewMyBondsFragment"
-            type="com.example.policy.fragments_and_activities.user_related.ViewMyBondsFragment" />
+            name="viewMyClaimsFragment"
+            type="com.example.policy.fragments_and_activities.user_related.ViewMyClaimsFragment" />
     </data>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewBonds"
+        android:id="@+id/recyclerViewClaims"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </layout>

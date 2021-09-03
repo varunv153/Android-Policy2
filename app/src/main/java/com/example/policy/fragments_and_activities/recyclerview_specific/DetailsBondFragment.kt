@@ -1,4 +1,4 @@
-package com.example.policy.fragments_and_activities.user_related
+package com.example.policy.fragments_and_activities.recyclerview_specific
 
 import android.os.Bundle
 import android.view.LayoutInflater

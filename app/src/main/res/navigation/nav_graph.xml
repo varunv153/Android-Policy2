@@ -82,6 +82,9 @@
         <action
             android:id="@+id/action_userScreenFragment_to_createClaimFragment"
             app:destination="@id/createClaimFragment" />
+        <action
+            android:id="@+id/action_userScreenFragment_to_viewMyClaimsFragment"
+            app:destination="@id/viewMyClaimsFragment" />
     </fragment>
     <fragment
         android:id="@+id/userSignupFragment"
@@ -104,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsPolicyFragment"
-        android:name="com.example.policy.fragments_and_activities.company_related.DetailsPolicyFragment"
+        android:name="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsPolicyFragment"
         android:label="fragment_details_policy"
         tools:layout="@layout/fragment_details_policy" />
     <fragment
@@ -132,12 +135,26 @@
     </fragment>
     <fragment
         android:id="@+id/detailsBondFragment"
-        android:name="com.example.policy.fragments_and_activities.user_related.DetailsBondFragment"
+        android:name="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsBondFragment"
         android:label="fragment_details_bond"
         tools:layout="@layout/fragment_details_bond" />
     <fragment
         android:id="@+id/createClaimFragment"
-        android:name="com.example.policy.CreateClaimFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.CreateClaimFragment"
         android:label="fragment_create_claim"
         tools:layout="@layout/fragment_create_claim" />
+    <fragment
+        android:id="@+id/viewMyClaimsFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.ViewMyClaimsFragment"
+        android:label="fragment_view_my_claims"
+        tools:layout="@layout/fragment_view_my_claims" >
+        <action
+            android:id="@+id/action_viewMyClaimsFragment_to_detailsClaimFragment"
+            app:destination="@id/detailsClaimFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsClaimFragment"
+        android:name="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsClaimFragment"
+        android:label="fragment_details_claim"
+        tools:layout="@layout/fragment_details_claim" />
 </navigation>

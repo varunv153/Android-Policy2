@@ -2,18 +2,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
-tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
+tools:context=".fragments_and_activities.recyclerview_specific.DetailsBondFragment">
     <data>
         <variable
             name="detailsBondFragment"
-            type="com.example.policy.fragments_and_activities.user_related.DetailsBondFragment"/>
+            type="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsBondFragment"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="385dp">
 
         <TextView
-            android:id="@+id/bondIDTxt"
+            android:id="@+id/claimIDTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
@@ -32,37 +32,37 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_marginTop="4dp"
             android:text="Bond ID"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/bondIDTxt" />
+            app:layout_constraintTop_toTopOf="@+id/claimIDTxt" />
 
         <TextView
-            android:id="@+id/policyIDTxt"
+            android:id="@+id/bondIDTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="Policy ID Value"
             android:text="@{detailsBondFragment.policyID}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
-            app:layout_constraintTop_toBottomOf="@+id/bondIDTxt" />
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+            app:layout_constraintTop_toBottomOf="@+id/claimIDTxt" />
 
         <TextView
-            android:id="@+id/userEmailTxt"
+            android:id="@+id/hospitalizationCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="User Email Value"
             android:text="@{detailsBondFragment.userEmail}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
-            app:layout_constraintTop_toBottomOf="@+id/policyIDTxt" />
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+            app:layout_constraintTop_toBottomOf="@+id/bondIDTxt" />
 
         <TextView
-            android:id="@+id/policyHolderTxt"
+            android:id="@+id/claimAmountTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:hint="Policy Holder Name"
             android:text="@{detailsBondFragment.policyHolderName}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
-            app:layout_constraintTop_toBottomOf="@+id/userEmailTxt" />
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+            app:layout_constraintTop_toBottomOf="@+id/hospitalizationCity" />
 
         <TextView
             android:id="@+id/policyHolderAgeTxt"
@@ -71,8 +71,8 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_marginTop="32dp"
             android:hint="Policy Holder Age"
             android:text="@{detailsBondFragment.policyHolderAge}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
-            app:layout_constraintTop_toBottomOf="@+id/policyHolderTxt" />
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+            app:layout_constraintTop_toBottomOf="@+id/claimAmountTxt" />
 
         <TextView
             android:id="@+id/secondLineTxt"
@@ -80,7 +80,7 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_height="wrap_content"
             android:text="Policy ID"
             app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
-            app:layout_constraintTop_toTopOf="@+id/policyIDTxt" />
+            app:layout_constraintTop_toTopOf="@+id/bondIDTxt" />
 
         <TextView
             android:id="@+id/ThirdLineTxt"
@@ -88,7 +88,7 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_height="wrap_content"
             android:text="User Email"
             app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
-            app:layout_constraintTop_toTopOf="@+id/userEmailTxt" />
+            app:layout_constraintTop_toTopOf="@+id/hospitalizationCity" />
 
         <TextView
             android:id="@+id/FourthLineTxt"
@@ -96,7 +96,7 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_height="wrap_content"
             android:text="Policy Holder Name"
             app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
-            app:layout_constraintTop_toTopOf="@+id/policyHolderTxt" />
+            app:layout_constraintTop_toTopOf="@+id/claimAmountTxt" />
 
         <TextView
             android:id="@+id/SixthLineTxt"
@@ -104,7 +104,7 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_height="wrap_content"
             android:text="Policy Valid For"
             app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
-            app:layout_constraintTop_toTopOf="@+id/policyAgeTxt" />
+            app:layout_constraintTop_toTopOf="@+id/reasonTxt" />
 
         <TextView
             android:id="@+id/FifthLineTxt"
@@ -115,13 +115,13 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             app:layout_constraintTop_toTopOf="@+id/policyHolderAgeTxt" />
 
         <TextView
-            android:id="@+id/policyAgeTxt"
+            android:id="@+id/reasonTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:hint="Policy Age Value"
             android:text="@{detailsBondFragment.policyAge}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
             app:layout_constraintTop_toBottomOf="@+id/policyHolderAgeTxt" />
 
         <TextView
@@ -130,17 +130,17 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_height="wrap_content"
             android:text="Pre-existing Diseases"
             app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
-            app:layout_constraintTop_toTopOf="@+id/preDiseasesTxt" />
+            app:layout_constraintTop_toTopOf="@+id/hospitalNameTxt" />
 
         <TextView
-            android:id="@+id/preDiseasesTxt"
+            android:id="@+id/hospitalNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="Pre Diseases Value"
             android:text="@{detailsBondFragment.preExistingDiseases}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
-            app:layout_constraintTop_toBottomOf="@+id/policyAgeTxt" />
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+            app:layout_constraintTop_toBottomOf="@+id/reasonTxt" />
 
         <TextView
             android:id="@+id/eigthLineTxt"
@@ -157,7 +157,7 @@ tools:context=".fragments_and_activities.user_related.DetailsBondFragment">
             android:layout_marginTop="20dp"
             android:hint="Premium Paid Value"
             android:text="@{detailsBondFragment.premium}"
-            app:layout_constraintStart_toStartOf="@+id/bondIDTxt"
-            app:layout_constraintTop_toBottomOf="@+id/preDiseasesTxt" />
+            app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+            app:layout_constraintTop_toBottomOf="@+id/hospitalNameTxt" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

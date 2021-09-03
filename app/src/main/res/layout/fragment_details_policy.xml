@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragments_and_activities.company_related.DetailsPolicyFragment">
+    tools:context=".fragments_and_activities.recyclerview_specific.DetailsPolicyFragment">
     <data>
         <variable
             name="detailsPolicyFragment"
-            type="com.example.policy.fragments_and_activities.company_related.DetailsPolicyFragment"/>
+            type="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsPolicyFragment"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toTopOf="@+id/sumInsuredTxt" />
 
         <TextView
-            android:id="@+id/policyIDTxt"
+            android:id="@+id/bondIDTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -65,7 +65,7 @@
             android:hint="Policy Wording Value"
             android:text="@{detailsPolicyFragment.policyWording}"
             app:layout_constraintStart_toStartOf="@+id/sumInsuredTxt"
-            app:layout_constraintTop_toBottomOf="@+id/policyIDTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/bondIDTxt" />
 
         <TextView
             android:id="@+id/roomRentTxt"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:text="ID"
             app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
-            app:layout_constraintTop_toTopOf="@+id/policyIDTxt" />
+            app:layout_constraintTop_toTopOf="@+id/bondIDTxt" />
 
         <TextView
             android:id="@+id/ThirdLineTxt"

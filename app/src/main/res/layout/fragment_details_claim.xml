@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".fragments_and_activities.recyclerview_specific.DetailsClaimFragment">
+<data>
+    <variable
+        name="detailsClaimFragment"
+        type="com.example.policy.fragments_and_activities.recyclerview_specific.DetailsClaimFragment"/>
+</data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="385dp">
+
+    <TextView
+        android:id="@+id/claimIDTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="76dp"
+        android:hint="Claim ID Value"
+        android:text="@{detailsClaimFragment.id}"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstLineLabel"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:text="Claim ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/claimIDTxt" />
+
+    <TextView
+        android:id="@+id/bondIDTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Bond ID Value"
+        android:text="@{detailsClaimFragment.bondID}"
+        app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+        app:layout_constraintTop_toBottomOf="@+id/claimIDTxt" />
+
+    <TextView
+        android:id="@+id/hospitalizationCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Hospitalization City"
+        android:text="@{detailsClaimFragment.city}"
+        app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+        app:layout_constraintTop_toBottomOf="@+id/bondIDTxt" />
+
+    <TextView
+        android:id="@+id/claimAmountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Claim Amount"
+        android:text="@{detailsClaimFragment.claimAmount}"
+        app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+        app:layout_constraintTop_toBottomOf="@+id/hospitalizationCity" />
+
+    <TextView
+        android:id="@+id/policyHolderAgeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Claim Status"
+        android:text="@{detailsClaimFragment.claimStatus}"
+        app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+        app:layout_constraintTop_toBottomOf="@+id/claimAmountTxt" />
+
+    <TextView
+        android:id="@+id/secondLineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bond ID"
+        app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
+        app:layout_constraintTop_toTopOf="@+id/bondIDTxt" />
+
+    <TextView
+        android:id="@+id/ThirdLineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospitalization City"
+        app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
+        app:layout_constraintTop_toTopOf="@+id/hospitalizationCity" />
+
+    <TextView
+        android:id="@+id/FourthLineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Claim Amount"
+        app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
+        app:layout_constraintTop_toTopOf="@+id/claimAmountTxt" />
+
+    <TextView
+        android:id="@+id/SixthLineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason"
+        app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
+        app:layout_constraintTop_toTopOf="@+id/reasonTxt" />
+
+    <TextView
+        android:id="@+id/FifthLineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Claim Status"
+        app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
+        app:layout_constraintTop_toTopOf="@+id/policyHolderAgeTxt" />
+
+    <TextView
+        android:id="@+id/reasonTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="Reason"
+        android:text="@{detailsClaimFragment.reason}"
+        app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+        app:layout_constraintTop_toBottomOf="@+id/policyHolderAgeTxt" />
+
+    <TextView
+        android:id="@+id/seventhLineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital Name"
+        app:layout_constraintStart_toStartOf="@+id/firstLineLabel"
+        app:layout_constraintTop_toTopOf="@+id/hospitalNameTxt" />
+
+    <TextView
+        android:id="@+id/hospitalNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Hospital Name"
+        android:text="@{detailsClaimFragment.hospitalName}"
+        app:layout_constraintStart_toStartOf="@+id/claimIDTxt"
+        app:layout_constraintTop_toBottomOf="@+id/reasonTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -30,4 +30,8 @@ class UserRepository
     {
         return RetrofitInstance.userAPIService.createClaim(newClaim)
     }
+    suspend fun viewMyClaims(): Response<MutableList<Claim>>
+    {
+        return RetrofitInstance.userAPIService.viewMyClaims()
+    }
 }

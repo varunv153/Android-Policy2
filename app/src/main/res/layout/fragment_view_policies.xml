@@ -8,7 +8,7 @@ tools:context=".fragments_and_activities.user_related.ViewPoliciesFragment">
             type="com.example.policy.fragments_and_activities.user_related.ViewPoliciesFragment" />
     </data>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCompanyPolicies"
+        android:id="@+id/recyclerViewPolicies"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </layout>

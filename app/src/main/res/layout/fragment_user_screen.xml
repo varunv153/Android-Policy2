@@ -40,13 +40,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Claim Status"
-            android:onClick="@{()->userScreenFragment.renderViewPolicies()}">
+            android:onClick="@{()->userScreenFragment.renderViewMyClaims()}">
         </Button>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Logout"
-            android:onClick="@{()->userScreenFragment.renderViewPolicies()}">
+            android:onClick="@{()->userScreenFragment.logoutUser()}">
         </Button>
     </LinearLayout>
 

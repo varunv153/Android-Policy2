@@ -12,12 +12,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.policy.R
 import com.example.policy.databinding.FragmentViewPoliciesBinding
-import com.example.policy.fragments_and_activities.company_related.MyAdapter
+import com.example.policy.fragments_and_activities.recyclerview_specific.MyAdapterPolicy
 import com.example.policy.models.Policy
 import com.example.policy.viewmodels.MyAdapterViewModel
 import com.example.policy.viewmodels.ViewPoliciesViewModel
 
-class ViewPoliciesFragment : Fragment(), MyAdapter.ItemClickListener
+class ViewPoliciesFragment : Fragment(), MyAdapterPolicy.ItemClickListener
 {
     private var binding: FragmentViewPoliciesBinding? = null
     val viewModel: MyAdapterViewModel by activityViewModels()
@@ -42,8 +42,8 @@ class ViewPoliciesFragment : Fragment(), MyAdapter.ItemClickListener
             {
                 Log.e("Exception",e.toString())
             }
-            val recyclerView = binding?.recyclerViewCompanyPolicies
-            recyclerView?.adapter = MyAdapter(container!!.context, policies,this)
+            val recyclerView = binding?.recyclerViewPolicies
+            recyclerView?.adapter = MyAdapterPolicy(container!!.context, policies,this)
             recyclerView?.layoutManager = LinearLayoutManager(context)
         })
         return binding?.root

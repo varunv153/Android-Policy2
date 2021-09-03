@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.policy.R
 import com.example.policy.databinding.FragmentUserScreenBinding
+import com.example.policy.fragments_and_activities.jwtToken
 
 class UserScreenFragment : Fragment()
 {
@@ -42,5 +43,16 @@ class UserScreenFragment : Fragment()
     {
         Log.e("tag","user create claim")
         findNavController().navigate(R.id.action_userScreenFragment_to_createClaimFragment)
+    }
+    fun renderViewMyClaims()
+    {
+        Log.e("tag","user view claims")
+        findNavController().navigate(R.id.action_userScreenFragment_to_viewMyClaimsFragment)
+    }
+    fun logoutUser()
+    {
+        Log.e("tag","user logout")
+        jwtToken = "none"
+        findNavController().navigate(R.id.action_userScreenFragment_to_mainScreenFragment)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.policy.fragments_and_activities.company_related
+package com.example.policy.fragments_and_activities.user_related
 
 import android.os.Bundle
 import android.util.Log
@@ -11,27 +11,27 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.policy.R
-import com.example.policy.databinding.FragmentViewCompanyPoliciesBinding
-import com.example.policy.fragments_and_activities.recyclerview_specific.MyAdapterPolicy
-import com.example.policy.models.Policy
+import com.example.policy.databinding.FragmentViewMyClaimsBinding
+import com.example.policy.fragments_and_activities.recyclerview_specific.MyAdapterClaim
+import com.example.policy.models.Claim
 import com.example.policy.viewmodels.MyAdapterViewModel
-import com.example.policy.viewmodels.ViewCompanyPoliciesViewModel
+import com.example.policy.viewmodels.ViewMyClaimsViewModel
 
-class ViewCompanyPoliciesFragment : Fragment(), MyAdapterPolicy.ItemClickListener
+class ViewMyClaimsFragment : Fragment(), MyAdapterClaim.ItemClickListener
 {
-    private var binding: FragmentViewCompanyPoliciesBinding? = null
+    private var binding: FragmentViewMyClaimsBinding? = null
     val viewModel: MyAdapterViewModel by activityViewModels()
-    val viewModel2:ViewCompanyPoliciesViewModel by viewModels()
+    private val viewModel2: ViewMyClaimsViewModel by viewModels()
     override fun onCreateView( inflater: LayoutInflater,  container: ViewGroup?,  savedInstanceState: Bundle? ): View?
     {
-        binding = FragmentViewCompanyPoliciesBinding.inflate(inflater,container,false)
-        viewModel2.viewPoliciesOfCompany()
+        binding = FragmentViewMyClaimsBinding.inflate(inflater,container,false)
+        viewModel2.viewMyClaims()
         viewModel2.result.observe(viewLifecycleOwner,{
-            lateinit var policies:MutableList<Policy>
+            lateinit var claims:MutableList<Claim>
             try {
                 if (it.isSuccessful) {
                     Log.e("success",it.body().toString())
-                    policies = it.body()!!
+                    claims = it.body()!!
                 }
                 else {
                     val errorbody = it.errorBody()!!.string()
@@ -42,8 +42,8 @@ class ViewCompanyPoliciesFragment : Fragment(), MyAdapterPolicy.ItemClickListene
             {
                 Log.e("Exception",e.toString())
             }
-            val recyclerView = binding?.recyclerViewCompanyPolicies
-            recyclerView?.adapter = MyAdapterPolicy(container!!.context, policies,this)
+            val recyclerView = binding?.recyclerViewClaims
+            recyclerView?.adapter = MyAdapterClaim(container!!.context, claims,this)
             recyclerView?.layoutManager = LinearLayoutManager(context)
         })
         return binding?.root
@@ -51,11 +51,11 @@ class ViewCompanyPoliciesFragment : Fragment(), MyAdapterPolicy.ItemClickListene
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState)
-        binding?.viewCompanyPoliciesFragment = this
+        binding?.viewMyClaimsFragment = this
     }
-    override fun onItemClick(policy: Policy){
-        viewModel.policy = policy
-        viewModel.policy?.let { Log.e("company name", it.company_adminemail) }
-        findNavController().navigate(R.id.action_viewCompanyPoliciesFragment_to_detailsPolicyFragment)
+    override fun onItemClick(claim: Claim){
+        viewModel.claim = claim
+        viewModel.claim?.let { Log.e("claim id", it.id.toString()) }
+        findNavController().navigate(R.id.action_viewMyClaimsFragment_to_detailsClaimFragment)
     }
 }
