@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.policy.R
 import com.example.policy.models.Bond
 
-class MyAdapterBond(c: Context, b:MutableList<Bond>, clickLstnr: ItemClickListener): RecyclerView.Adapter<MyAdapterBond.MyViewHolder>()
+class MyAdapterBond(c: Context, b:MutableList<Bond>, clickLstnr: MyAdapterBond.ItemClickListener): RecyclerView.Adapter<MyAdapterBond.MyViewHolder>()
 {
     var context: Context = c
     private var bonds: MutableList<Bond> = b
     var clickListener  = clickLstnr;
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapterBond.MyViewHolder
     {
         val view = LayoutInflater.from(context).inflate(R.layout.my_row,parent, false)
-        return MyViewHolder(view)
+        return MyAdapterBond.MyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {

@@ -76,6 +76,9 @@
         <action
             android:id="@+id/action_userScreenFragment_to_buyPolicyFragment"
             app:destination="@id/buyPolicyFragment" />
+        <action
+            android:id="@+id/action_userScreenFragment_to_viewMyBondsFragment"
+            app:destination="@id/viewMyBondsFragment" />
     </fragment>
     <fragment
         android:id="@+id/userSignupFragment"
@@ -115,4 +118,18 @@
         android:name="com.example.policy.fragments_and_activities.user_related.BuyPolicyFragment"
         android:label="fragment_buy_policy"
         tools:layout="@layout/fragment_buy_policy" />
+    <fragment
+        android:id="@+id/viewMyBondsFragment"
+        android:name="com.example.policy.ViewMyBondsFragment"
+        android:label="fragment_view_my_bonds"
+        tools:layout="@layout/fragment_view_my_bonds" >
+        <action
+            android:id="@+id/action_viewMyBondsFragment_to_detailsBondFragment"
+            app:destination="@id/detailsBondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsBondFragment"
+        android:name="com.example.policy.DetailsBondFragment"
+        android:label="fragment_details_bond"
+        tools:layout="@layout/fragment_details_bond" />
 </navigation>

@@ -33,4 +33,9 @@ class UserScreenFragment : Fragment()
         Log.e("tag","user buy policy")
         findNavController().navigate(R.id.action_userScreenFragment_to_buyPolicyFragment)
     }
+    fun renderViewMyBonds()
+    {
+        Log.e("tag","user view bonds")
+        findNavController().navigate(R.id.action_userScreenFragment_to_viewMyBondsFragment)
+    }
 }
