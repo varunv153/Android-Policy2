@@ -1,9 +1,6 @@
 package com.example.policy.api
 
-import com.example.policy.models.Policy
-import com.example.policy.models.User
-import com.example.policy.models.loginStatus
-import com.example.policy.models.signUpStatus
+import com.example.policy.models.*
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -17,4 +14,8 @@ interface UserAPIService
     suspend fun loginUser(@Body newUser: User): Response<loginStatus>
     @GET("policies")
     suspend fun viewPolicies(): Response<MutableList<Policy>>
+    @POST("buy")
+    suspend fun buyPolicy(@Body newBond: NewBond): Response<BondStatus>
+    @GET("viewmypolicies")
+    suspend fun viewMyBonds(): Response<MutableList<Bond>>
 }

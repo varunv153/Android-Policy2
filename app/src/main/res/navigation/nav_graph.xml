@@ -73,6 +73,9 @@
         <action
             android:id="@+id/action_userScreenFragment_to_viewPoliciesFragment"
             app:destination="@id/viewPoliciesFragment" />
+        <action
+            android:id="@+id/action_userScreenFragment_to_buyPolicyFragment"
+            app:destination="@id/buyPolicyFragment" />
     </fragment>
     <fragment
         android:id="@+id/userSignupFragment"
@@ -100,11 +103,16 @@
         tools:layout="@layout/fragment_details_policy" />
     <fragment
         android:id="@+id/viewPoliciesFragment"
-        android:name="com.example.policy.ViewPoliciesFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.ViewPoliciesFragment"
         android:label="fragment_view_policies"
         tools:layout="@layout/fragment_view_policies" >
         <action
             android:id="@+id/action_viewPoliciesFragment_to_detailsPolicyFragment"
             app:destination="@id/detailsPolicyFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/buyPolicyFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.BuyPolicyFragment"
+        android:label="fragment_buy_policy"
+        tools:layout="@layout/fragment_buy_policy" />
 </navigation>

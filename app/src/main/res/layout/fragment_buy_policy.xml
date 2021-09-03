@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".fragments_and_activities.user_related.BuyPolicyFragment">
+    <data>
+    <variable
+        name="buyPolicyFragment"
+        type="com.example.policy.fragments_and_activities.user_related.BuyPolicyFragment"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/policyID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter policy ID"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/policyHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter policy holder name"/>
+
+        <EditText
+            android:id="@+id/preDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter pre-existing diseases"/>
+
+        <EditText
+            android:id="@+id/policyAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter policy validity time"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/policyHolderAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter policy holder age"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create BOND"
+            android:onClick="@{()->buyPolicyFragment.createBond()}" />
+
+        <TextView
+            android:id="@+id/displayInfo"
+            android:layout_width="match_parent"
+            android:layout_height="346dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+</layout>

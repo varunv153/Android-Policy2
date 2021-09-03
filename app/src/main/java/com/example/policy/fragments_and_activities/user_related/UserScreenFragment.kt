@@ -28,4 +28,9 @@ class UserScreenFragment : Fragment()
         Log.e("tag","user view policy")
         findNavController().navigate(R.id.action_userScreenFragment_to_viewPoliciesFragment)
     }
+    fun renderBuyPolicy()
+    {
+        Log.e("tag","user buy policy")
+        findNavController().navigate(R.id.action_userScreenFragment_to_buyPolicyFragment)
+    }
 }

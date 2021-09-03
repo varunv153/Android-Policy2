@@ -21,6 +21,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Buy Policy"
+            android:onClick="@{()->userScreenFragment.renderBuyPolicy()}">
+        </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="View my Bonds"
             android:onClick="@{()->userScreenFragment.renderViewPolicies()}">
         </Button>

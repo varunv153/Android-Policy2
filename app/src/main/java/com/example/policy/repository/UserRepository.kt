@@ -1,10 +1,7 @@
 package com.example.policy.repository
 
 import com.example.policy.api.RetrofitInstance
-import com.example.policy.models.Policy
-import com.example.policy.models.User
-import com.example.policy.models.loginStatus
-import com.example.policy.models.signUpStatus
+import com.example.policy.models.*
 import retrofit2.Response
 
 class UserRepository
@@ -20,5 +17,13 @@ class UserRepository
     suspend fun viewPolicies():Response<MutableList<Policy>>
     {
         return RetrofitInstance.userAPIService.viewPolicies()
+    }
+    suspend fun buyPolicy(newBond: NewBond): Response<BondStatus>
+    {
+        return RetrofitInstance.userAPIService.buyPolicy(newBond)
+    }
+    suspend fun viewMyBonds(): Response<MutableList<Bond>>
+    {
+        return RetrofitInstance.userAPIService.viewMyBonds()
     }
 }

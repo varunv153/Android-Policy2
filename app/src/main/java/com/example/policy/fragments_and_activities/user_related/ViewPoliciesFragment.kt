@@ -1,4 +1,4 @@
-package com.example.policy
+package com.example.policy.fragments_and_activities.user_related
 
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.policy.R
 import com.example.policy.databinding.FragmentViewPoliciesBinding
 import com.example.policy.fragments_and_activities.company_related.MyAdapter
 import com.example.policy.models.Policy

@@ -1,4 +1,4 @@
-package com.example.policy.fragments_and_activities.company_related
+package com.example.policy.fragments_and_activities.user_related
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.policy.R
-import com.example.policy.models.Policy
+import com.example.policy.models.Bond
 
-
-class MyAdapter(c:Context, p:MutableList<Policy>, clickLstnr: ItemClickListener): RecyclerView.Adapter<MyAdapter.MyViewHolder>()
+class MyAdapterBond(c: Context, b:MutableList<Bond>, clickLstnr: ItemClickListener): RecyclerView.Adapter<MyAdapterBond.MyViewHolder>()
 {
-    var context:Context = c
-    private var policies: MutableList<Policy> = p
+    var context: Context = c
+    private var bonds: MutableList<Bond> = b
     var clickListener  = clickLstnr;
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder
     {
@@ -23,24 +22,24 @@ class MyAdapter(c:Context, p:MutableList<Policy>, clickLstnr: ItemClickListener)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.companyNameText.text = policies[position].company_adminemail
-        holder.sumInsuredText.text = policies[position].suminsured.toString()
+        holder.bigText.text = bonds[position].id.toString()
+        holder.smallerText.text = bonds[position].policyid.toString()
         holder.cardPolicy.setOnClickListener {
-            clickListener.onItemClick(policies[position])
+            clickListener.onItemClick(bonds[position])
         }
     }
 
     override fun getItemCount(): Int {
-        return policies.size
+        return bonds.size
     }
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
-        var companyNameText: TextView = itemView.findViewById(R.id.bigTxt)
-        var sumInsuredText: TextView = itemView.findViewById(R.id.valueTxt)
+        var bigText: TextView = itemView.findViewById(R.id.bigTxt)
+        var smallerText: TextView = itemView.findViewById(R.id.valueTxt)
         var cardPolicy: CardView = itemView.findViewById(R.id.cardViewPolicy)
     }
 
     interface ItemClickListener {
-        fun onItemClick(policy: Policy)
+        fun onItemClick(bond: Bond)
     }
 }
