@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create Claim"
-            android:onClick="@{()->userScreenFragment.renderViewPolicies()}">
+            android:onClick="@{()->userScreenFragment.renderCreateClaim()}">
         </Button>
         <Button
             android:layout_width="match_parent"

@@ -24,12 +24,6 @@
             android:text="View my Policies"
             android:onClick="@{()->companyScreenFragment.renderViewPoliciesCompany()}">
         </Button>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Bonds"
-            android:onClick="@{()->companyScreenFragment.renderViewBonds()}">
-        </Button>
 
         <Button
             android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.policy
+package com.example.policy.fragments_and_activities.user_related
 
 import android.os.Bundle
 import android.view.LayoutInflater

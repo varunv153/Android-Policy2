@@ -18,4 +18,6 @@ interface UserAPIService
     suspend fun buyPolicy(@Body newBond: NewBond): Response<BondStatus>
     @GET("viewmypolicies")
     suspend fun viewMyBonds(): Response<MutableList<Bond>>
+    @POST("claimpolicy")
+    suspend fun createClaim(@Body newClaim: NewClaim): Response<ClaimStatus>
 }

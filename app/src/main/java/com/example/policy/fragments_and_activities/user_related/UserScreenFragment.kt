@@ -38,4 +38,9 @@ class UserScreenFragment : Fragment()
         Log.e("tag","user view bonds")
         findNavController().navigate(R.id.action_userScreenFragment_to_viewMyBondsFragment)
     }
+    fun renderCreateClaim()
+    {
+        Log.e("tag","user create claim")
+        findNavController().navigate(R.id.action_userScreenFragment_to_createClaimFragment)
+    }
 }

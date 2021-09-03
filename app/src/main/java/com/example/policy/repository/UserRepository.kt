@@ -26,4 +26,8 @@ class UserRepository
     {
         return RetrofitInstance.userAPIService.viewMyBonds()
     }
+    suspend fun createClaim(newClaim: NewClaim): Response<ClaimStatus>
+    {
+        return RetrofitInstance.userAPIService.createClaim(newClaim)
+    }
 }

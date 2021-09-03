@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
-tools:context=".ViewMyBondsFragment">
+tools:context=".fragments_and_activities.user_related.ViewMyBondsFragment">
     <data>
         <variable
             name="viewMyBondsFragment"
-            type="com.example.policy.ViewMyBondsFragment" />
+            type="com.example.policy.fragments_and_activities.user_related.ViewMyBondsFragment" />
     </data>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCompanyPolicies"

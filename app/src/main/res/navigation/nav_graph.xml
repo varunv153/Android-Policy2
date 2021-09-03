@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_userScreenFragment_to_viewMyBondsFragment"
             app:destination="@id/viewMyBondsFragment" />
+        <action
+            android:id="@+id/action_userScreenFragment_to_createClaimFragment"
+            app:destination="@id/createClaimFragment" />
     </fragment>
     <fragment
         android:id="@+id/userSignupFragment"
@@ -120,7 +123,7 @@
         tools:layout="@layout/fragment_buy_policy" />
     <fragment
         android:id="@+id/viewMyBondsFragment"
-        android:name="com.example.policy.ViewMyBondsFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.ViewMyBondsFragment"
         android:label="fragment_view_my_bonds"
         tools:layout="@layout/fragment_view_my_bonds" >
         <action
@@ -129,7 +132,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailsBondFragment"
-        android:name="com.example.policy.DetailsBondFragment"
+        android:name="com.example.policy.fragments_and_activities.user_related.DetailsBondFragment"
         android:label="fragment_details_bond"
         tools:layout="@layout/fragment_details_bond" />
+    <fragment
+        android:id="@+id/createClaimFragment"
+        android:name="com.example.policy.CreateClaimFragment"
+        android:label="fragment_create_claim"
+        tools:layout="@layout/fragment_create_claim" />
 </navigation>

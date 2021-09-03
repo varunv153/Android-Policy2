@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".CreateClaimFragment">
+    <data>
+        <variable
+            name="createClaimFragment"
+            type="com.example.policy.CreateClaimFragment"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/bondID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter bond ID"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter claim reason"/>
+
+        <EditText
+            android:id="@+id/claimAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter claim amount"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/hospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter hospital name"/>
+
+        <EditText
+            android:id="@+id/cityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter city name"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Claim"
+            android:onClick="@{()->createClaimFragment.createClaim()}" />
+
+        <TextView
+            android:id="@+id/displayInfo"
+            android:layout_width="match_parent"
+            android:layout_height="346dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+</layout>
