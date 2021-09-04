@@ -37,7 +37,7 @@ class CompanyScreenFragment : Fragment()
     fun renderViewBonds()
     {
         Log.e("tag","company create policy")
-        //findNavController().navigate(R.id.action_mainScreenFragment_to_companySignupFragment)
+        findNavController().navigate(R.id.action_companyScreenFragment_to_viewCompanyBondsFragment)
     }
     fun renderViewClaimsCompany()
     {

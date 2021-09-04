@@ -6,7 +6,7 @@
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_buy_policy.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_company_login.xml" value="0.11458333333333333" />
-        <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_company_screen.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_company_screen.xml" value="0.21" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_company_signup.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_create_claim.xml" value="0.33" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_create_policy.xml" value="0.12364130434782608" />
@@ -17,6 +17,7 @@
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_user_login.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_user_screen.xml" value="0.25" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_user_signup.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_view_company_bonds.xml" value="0.153125" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_view_company_claims.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_view_company_policies.xml" value="0.10507246376811594" />
         <entry key="..\:/Users/ACER/Desktop/Policy/app/src/main/res/layout/fragment_view_my_bonds.xml" value="0.20416666666666666" />

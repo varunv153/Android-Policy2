@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_companyScreenFragment_to_viewCompanyClaimsFragment"
             app:destination="@id/viewCompanyClaimsFragment" />
+        <action
+            android:id="@+id/action_companyScreenFragment_to_viewCompanyBondsFragment"
+            app:destination="@id/viewCompanyBondsFragment" />
     </fragment>
     <fragment
         android:id="@+id/companySignup"
@@ -167,5 +170,14 @@
         <action
             android:id="@+id/action_viewCompanyClaimsFragment_to_detailsClaimFragment"
             app:destination="@id/detailsClaimFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewCompanyBondsFragment"
+        android:name="com.example.policy.fragments_and_activities.company_related.ViewCompanyBondsFragment"
+        android:label="fragment_view_company_bonds"
+        tools:layout="@layout/fragment_view_company_bonds" >
+        <action
+            android:id="@+id/action_viewCompanyBondsFragment_to_detailsBondFragment"
+            app:destination="@id/detailsBondFragment" />
     </fragment>
 </navigation>
